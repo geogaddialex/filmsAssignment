@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>11020639 - Enterprise Programming</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/Assignment/css/jquery.dynatable.css" rel="stylesheet"/>
+    <link href="/Assignment/css/main.css" rel="stylesheet"/>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="https://fastcdn.org/Underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="/Assignment/js/jquery.dynatable.js"></script>
+    <script src="/Assignment/js/vkbeautify.js"></script>
+    <script src="/Assignment/js/controller.js"></script>
+</head>
+
+<body>
+
+<div class="row">
+	<div class="col-xs-4"><input id="showAllButton" type="button" value="Show all films"></div>
+	<div class="col-xs-4"><input id="searchButton" type="button" value="Search films"></div>
+	<div class="col-xs-4"><input id="addButton" type="button" value="Add film"></div>
+</div>
+
+<div class="row" id="search">
+	<div class="col-xs-12">
+	
+		<form id="searchInput">
+
+			Search titles for: 
+			<input name="search" type="text">
+			
+			<br>
+			
+			Return format: 
+			<select name="format">
+				<option value="json">JSON</option>
+				<option value="xml">XML</option>
+				<option value="text">Text</option>
+			</select>
+			
+			<br>
+			
+			Display type:
+			<select name="display">
+				<option value="raw">Raw data</option>
+				<option value="pretty">Formatted data</option>
+			</select>
+		
+		</form>
+		
+		<button type="submit" form="searchInput">Retrieve</button>
+		
+		<div id="searchResults"></div>
+
+		<div id="searchResultsTableContainer">
+			<table id="searchResultsTable">
+			  <thead>
+			  	<th>ID</th>
+			    <th>Title</th>
+			    <th>Year</th>
+			    <th>Director</th>
+			    <th>Stars</th>
+			    <th>Review</th>
+			  </thead>
+			  <tbody>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="row" id="all">
+	<div class="col-xs-12">
+		<form id="allInput">
+			
+			Return format: 
+			<select name="format">
+				<option value="json">JSON</option>
+				<option value="xml">XML</option>
+				<option value="text">Text</option>
+			</select>
+			
+			<br>
+			
+			Display type:
+			<select name="display">
+				<option value="raw">Raw data</option>
+				<option value="pretty">Formatted data</option>
+			</select>
+		
+		</form>
+		
+		<button type="submit" form="allInput">Retrieve</button>
+		
+		<div id="allResults"></div>
+
+		<div id="allResultsTableContainer">
+			<table id="allResultsTable">
+			  <thead>
+			  	<th>ID</th>
+			    <th>Title</th>
+			    <th>Year</th>
+			    <th>Director</th>
+			    <th>Stars</th>
+			    <th>Review</th>
+			  </thead>
+			  <tbody>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="row" id="add">
+	<div class="col-xs-12">
+		<form id="addInput" action="http://localhost:8080/Assignment/Films" method="post">
+		
+			<input name="title" type="text">
+			<input name="year" type="number" min="1900" max="2020">
+			<input name="director" type="text">
+			<input name="stars" type="text">
+			<input name="review" type="text">
+			
+			<select name="format">
+				<option value="json">Add via JSON</option>
+				<option value="xml">Add via XML</option>
+				<option value="plain">Add via form</option>
+			</select>
+			
+			<select name="display">
+				<option value="raw">Display raw data</option>
+				<option value="pretty">Display formatted data</option>
+			</select>
+		
+		</form>
+		
+		<button type="submit" form="addInput">Add</button>
+		
+		<div id="addMessage"></div>
+		
+		<div id="addResults"></div>
+
+		<div id="addResultsTableContainer">
+			<table id="addResultsTable">
+			  <thead>
+			  	<th>ID</th>
+			    <th>Title</th>
+			    <th>Year</th>
+			    <th>Director</th>
+			    <th>Stars</th>
+			    <th>Review</th>
+			  </thead>
+			  <tbody>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

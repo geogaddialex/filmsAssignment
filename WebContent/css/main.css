@@ -1,0 +1,41 @@
+#addResultsTable thead th, #addResultsTable thead td, #allResultsTable thead th, #allResultsTable thead td, #searchResultsTable thead th, #searchResultsTable thead td {
+  padding:0 20px;
+  color:black;
+}
+
+th a{
+	color: black !important;
+}
+
+#allResultsTable td, #searchResultsTable td, addResultsTable td{
+	border-style:solid;
+	border-width: 1px;
+}
+
+input[type="button"] {
+   width:100%;
+   height:30px;
+   margin:0 0 20px 0;
+   border-radius:0;
+   border-style:solid;
+   border-width: 1px;
+   background-color: #F9F4EE;
+}
+
+input[type="button"]:hover{
+	background-color:#f2e7d9;
+}
+
+input[type="button"].selected{
+	background-color:#414448;
+	border-color:#414448;
+	color:white;
+}
+
+div.col-xs-4{
+	   padding:0 !important;
+}
+
+body{
+	overflow-x:hidden;
+}
