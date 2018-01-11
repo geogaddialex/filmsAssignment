@@ -1,5 +1,6 @@
-package assignment;
+package viewer;
 
+import model.Film;
 import java.util.List;
 
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -1,5 +1,5 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="assignment.Film" %>
+<%@ page import="model.Film" %>
 
 <%
 

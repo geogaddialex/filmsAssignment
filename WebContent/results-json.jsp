@@ -1,6 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="assignment.Film" %>
-<%@ page import="assignment.FilmViewer" %>
+<%@ page import="model.Film" %>
+<%@ page import="viewer.FilmViewer" %>
 
 <%
 
